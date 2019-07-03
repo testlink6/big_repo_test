@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <ui name="AvocadoUI" href="streamingAssets://AppConfigs/AvocadoUI.zip" />
+  <ui name="REFLEKT_UI" href="streamingAssets://AppConfigs/REFLEKT_UI.zip" />
+  <ui name="TwoHandedUI-phone" href="streamingAssets://AppConfigs/TwoHandedUI-phone.zip" />
+  <ui name="TwoHandedUI" href="streamingAssets://AppConfigs/TwoHandedUI.zip" />
+</configuration>

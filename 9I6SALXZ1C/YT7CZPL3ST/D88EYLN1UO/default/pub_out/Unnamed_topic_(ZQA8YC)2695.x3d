@@ -1,0 +1,1144 @@
+<!--CAP X3D File--><X3D xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+     profile="Full"
+     version="3.0"
+     xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.3.xsd">
+	  <Scene>
+		    <ExternProtoDeclare name="Callout" url="Cap.Callout">
+			      <field name="appearance" type="SFNode" accessType="inputOutput"/>
+			      <field name="translation" type="SFVec3f" accessType="inputOutput"/>
+			      <field name="text" type="SFString" accessType="initializeOnly"/>
+			      <field name="corner" type="SFInt32" accessType="initializeOnly"/>
+			      <field name="background" type="SFColorRGBA" accessType="initializeOnly"/>
+			      <field name="margins" type="MFInt32" accessType="initializeOnly"/>
+			      <field name="borderColor" type="SFColor" accessType="initializeOnly"/>
+			      <field name="borderSize" type="SFInt32" accessType="initializeOnly"/>
+			      <field name="touchPositions" type="MFVec3f" accessType="initializeOnly"/>
+		    </ExternProtoDeclare>
+		    <ExternProtoDeclare name="Animation" url="Cap.Animation">
+			      <field name="stepIndex" type="SFInt32" accessType="initializeOnly"/>
+			      <field name="timers" type="MFNode" accessType="initializeOnly"/>
+		    </ExternProtoDeclare>
+		    <ProtoDeclare name="SwitchVRML">
+			      <ProtoInterface>
+				        <field name="whichChoice"
+                   type="SFInt32"
+                   accessType="inputOutput"
+                   value="-1"/>
+				        <field name="choice" type="MFNode" accessType="inputOutput"/>
+			      </ProtoInterface>
+			      <ProtoBody>
+				        <Switch>
+					          <IS>
+						            <connect nodeField="whichChoice" protoField="whichChoice"/>
+						            <connect nodeField="children" protoField="choice"/>
+					          </IS>
+				        </Switch>
+			      </ProtoBody>
+		    </ProtoDeclare>
+		    <ProtoDeclare name="CollisionVRML">
+			      <ProtoInterface>
+				        <field name="children" type="MFNode" accessType="inputOutput"/>
+				        <field name="collide"
+                   type="SFBool"
+                   accessType="inputOutput"
+                   value="true"/>
+				        <field name="bboxCenter"
+                   type="SFVec3f"
+                   accessType="initializeOnly"
+                   value="0 0 0"/>
+				        <field name="bboxSize"
+                   type="SFVec3f"
+                   accessType="initializeOnly"
+                   value="-1 -1 -1"/>
+				        <field name="proxy" type="SFNode" accessType="initializeOnly"/>
+				        <field name="addChildren" type="MFNode" accessType="inputOnly"/>
+				        <field name="removeChildren" type="MFNode" accessType="inputOnly"/>
+				        <field name="collideTime"
+                   type="SFTime"
+                   accessType="outputOnly"
+                   value="0"/>
+			      </ProtoInterface>
+			      <ProtoBody>
+				        <Collision>
+					          <IS>
+						            <connect nodeField="children" protoField="children"/>
+						            <connect nodeField="enabled" protoField="collide"/>
+						            <connect nodeField="bboxCenter" protoField="bboxCenter"/>
+						            <connect nodeField="bboxSize" protoField="bboxSize"/>
+						            <connect nodeField="proxy" protoField="proxy"/>
+						            <connect nodeField="addChildren" protoField="addChildren"/>
+						            <connect nodeField="removeChildren" protoField="removeChildren"/>
+						            <connect nodeField="collideTime" protoField="collideTime"/>
+					          </IS>
+				        </Collision>
+			      </ProtoBody>
+		    </ProtoDeclare>
+		    <ProtoDeclare name="Procedure">
+			      <ProtoInterface>
+				        <field name="title" type="SFString" accessType="initializeOnly"/>
+				        <field name="comment" type="SFString" accessType="initializeOnly"/>
+				        <field name="id" type="SFString" accessType="inputOutput"/>
+				        <field name="steps" type="MFNode" accessType="inputOutput"/>
+			      </ProtoInterface>
+			      <ProtoBody>
+				        <Group>
+					          <IS>
+						            <connect nodeField="children" protoField="steps"/>
+					          </IS>
+				        </Group>
+			      </ProtoBody>
+		    </ProtoDeclare>
+		    <ProtoDeclare name="protoSimulationPlayer">
+			      <ProtoInterface>
+				        <field name="version_num"
+                   type="SFString"
+                   accessType="inputOutput"
+                   value="5.056"/>
+				        <field name="OP" type="SFNode" accessType="inputOutput"/>
+				        <field name="AllSubSteps" type="SFNode" accessType="inputOutput"/>
+				        <field name="SKIN_INFO" type="SFNode" accessType="inputOutput"/>
+				        <field name="NAV_INFO" type="SFNode" accessType="inputOutput"/>
+				        <field name="isEnabledSkinControl"
+                   type="SFBool"
+                   accessType="inputOutput"
+                   value="true"/>
+				        <field name="isZoomToCenter"
+                   type="SFBool"
+                   accessType="inputOutput"
+                   value="true"/>
+				        <field name="whichChoiceSlider"
+                   type="SFInt32"
+                   accessType="inputOutput"
+                   value="-1"/>
+				        <field name="whichChoiceXYZ"
+                   type="SFInt32"
+                   accessType="inputOutput"
+                   value="-1"/>
+				        <field name="whichChoiceZOOM"
+                   type="SFInt32"
+                   accessType="inputOutput"
+                   value="-1"/>
+				        <field name="whichChoiceZOOM2"
+                   type="SFInt32"
+                   accessType="inputOutput"
+                   value="-1"/>
+				        <field name="whichChoiceControlButtons"
+                   type="SFInt32"
+                   accessType="inputOutput"
+                   value="-1"/>
+				        <field name="whichChoiceStandardAxes"
+                   type="SFInt32"
+                   accessType="inputOutput"
+                   value="0"/>
+				        <field name="externalAxes" type="MFNode" accessType="inputOutput"/>
+				        <field name="on_start_substep"
+                   type="MFString"
+                   accessType="outputOnly"
+                   value=""/>
+				        <field name="on_start_new_substep"
+                   type="MFString"
+                   accessType="outputOnly"
+                   value=""/>
+				        <field name="on_event_out"
+                   type="MFString"
+                   accessType="outputOnly"
+                   value=""/>
+				        <field name="on_procedure_events"
+                   type="MFString"
+                   accessType="outputOnly"
+                   value=""/>
+				        <field name="on_vcr_state"
+                   type="SFInt32"
+                   accessType="outputOnly"
+                   value="0"/>
+				        <field name="on_new_state"
+                   type="MFString"
+                   accessType="outputOnly"
+                   value=""/>
+				        <field name="on_zoom" type="SFFloat" accessType="outputOnly" value="0"/>
+				        <field name="on_proc_fraction"
+                   type="SFFloat"
+                   accessType="outputOnly"
+                   value="0"/>
+				        <field name="on_substep_fraction"
+                   type="SFFloat"
+                   accessType="outputOnly"
+                   value="0"/>
+				        <field name="on_step_fraction"
+                   type="SFFloat"
+                   accessType="outputOnly"
+                   value="0"/>
+				        <field name="on_audio_state"
+                   type="SFInt32"
+                   accessType="outputOnly"
+                   value="0"/>
+				        <field name="new_procedure" type="SFNode" accessType="inputOnly"/>
+				        <field name="ui_smoothcontrol"
+                   type="SFBool"
+                   accessType="inputOnly"
+                   value="false"/>
+				        <field name="ui_axis"
+                   type="SFBool"
+                   accessType="inputOnly"
+                   value="false"/>
+				        <field name="ui_zoom"
+                   type="SFBool"
+                   accessType="inputOnly"
+                   value="false"/>
+				        <field name="ui_vcr"
+                   type="SFBool"
+                   accessType="inputOnly"
+                   value="false"/>
+				        <field name="ui_safeframe"
+                   type="SFInt32"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="vcr_play" type="SFTime" accessType="inputOnly" value="0"/>
+				        <field name="vcr_stop" type="SFTime" accessType="inputOnly" value="0"/>
+				        <field name="vcr_pause" type="SFTime" accessType="inputOnly" value="0"/>
+				        <field name="vcr_forward"
+                   type="SFTime"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="vcr_backward"
+                   type="SFTime"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="vcr_next" type="SFTime" accessType="inputOnly" value="0"/>
+				        <field name="vcr_previous"
+                   type="SFTime"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="vcr_goto" type="SFString" accessType="inputOnly"/>
+				        <field name="vcr_set_range"
+                   type="MFString"
+                   accessType="inputOnly"
+                   value=""/>
+				        <field name="vcr_set_position" type="SFString" accessType="inputOnly"/>
+				        <field name="vcr_set_fraction"
+                   type="SFFloat"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="speed_ratio"
+                   type="SFFloat"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="stop_by_substep"
+                   type="SFBool"
+                   accessType="inputOnly"
+                   value="false"/>
+				        <field name="stop_by_step"
+                   type="SFBool"
+                   accessType="inputOnly"
+                   value="false"/>
+				        <field name="zoom_reset"
+                   type="SFTime"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="zoom_set_delta"
+                   type="SFFloat"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="zoom_set_level"
+                   type="SFFloat"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="vcr_set_proc_fraction"
+                   type="SFFloat"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="vcr_set_step_fraction"
+                   type="SFFloat"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="substep_fraction"
+                   type="SFFloat"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="procedure_fraction"
+                   type="SFFloat"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="step_fraction"
+                   type="SFFloat"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="now_step_substep_fraction"
+                   type="MFFloat"
+                   accessType="inputOnly"
+                   value=""/>
+				        <field name="step_substep_fraction"
+                   type="MFFloat"
+                   accessType="inputOnly"
+                   value=""/>
+				        <field name="ssf" type="MFFloat" accessType="inputOnly" value=""/>
+				        <field name="ignore_viewpoints"
+                   type="SFBool"
+                   accessType="inputOnly"
+                   value="false"/>
+				        <field name="reinitialize"
+                   type="SFTime"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="reinitialize_step"
+                   type="SFTime"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="reinitialize_substep"
+                   type="SFTime"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="reinitialize_all_substeps"
+                   type="SFTime"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="mute_audio"
+                   type="SFBool"
+                   accessType="inputOnly"
+                   value="false"/>
+				        <field name="new_viewpoint"
+                   type="MFFloat"
+                   accessType="inputOnly"
+                   value=""/>
+				        <field name="maxZoom"
+                   type="SFFloat"
+                   accessType="inputOutput"
+                   value="5"/>
+				        <field name="minZoom"
+                   type="SFFloat"
+                   accessType="inputOutput"
+                   value="2.5"/>
+				        <field name="CommandsSetID" type="MFNode" accessType="inputOutput"/>
+				        <field name="isFinal"
+                   type="SFBool"
+                   accessType="inputOutput"
+                   value="false"/>
+				        <field name="step" type="SFInt32" accessType="inputOutput" value="0"/>
+				        <field name="substep"
+                   type="SFInt32"
+                   accessType="inputOutput"
+                   value="0"/>
+				        <field name="phase" type="SFFloat" accessType="inputOutput" value="0"/>
+				        <field name="blockViewpoints"
+                   type="SFBool"
+                   accessType="inputOutput"
+                   value="false"/>
+				        <field name="alwaysWarning"
+                   type="SFBool"
+                   accessType="inputOutput"
+                   value="false"/>
+				        <field name="timeCompression"
+                   type="SFFloat"
+                   accessType="inputOutput"
+                   value="1"/>
+				        <field name="isInitialize"
+                   type="SFBool"
+                   accessType="inputOutput"
+                   value="false"/>
+				        <field name="muteAudio"
+                   type="SFBool"
+                   accessType="inputOutput"
+                   value="false"/>
+				        <field name="newproc" type="SFNode" accessType="inputOutput"/>
+				        <field name="inPlayPause"
+                   type="SFBool"
+                   accessType="inputOnly"
+                   value="false"/>
+				        <field name="outPlayPause"
+                   type="SFBool"
+                   accessType="outputOnly"
+                   value="false"/>
+				        <field name="setSliderPosition"
+                   type="SFFloat"
+                   accessType="inputOnly"
+                   value="0"/>
+				        <field name="onSliderMove"
+                   type="SFFloat"
+                   accessType="outputOnly"
+                   value="0"/>
+				        <field name="onSliderFraction"
+                   type="SFFloat"
+                   accessType="outputOnly"
+                   value="0"/>
+				        <field name="base_VP_orientation"
+                   type="SFRotation"
+                   accessType="inputOutput"
+                   value="0 0 1 0"/>
+				        <field name="base_VP_position"
+                   type="SFVec3f"
+                   accessType="inputOutput"
+                   value="0 0 10"/>
+				        <field name="axes_rotation"
+                   type="SFRotation"
+                   accessType="inputOutput"
+                   value="0 0 1 0"/>
+				        <field name="axes_scale"
+                   type="SFVec3f"
+                   accessType="inputOutput"
+                   value="1 1 1"/>
+				        <field name="axes_position"
+                   type="SFVec2f"
+                   accessType="inputOutput"
+                   value="0.85 0.15"/>
+				        <field name="use_old_style_vcr"
+                   type="SFBool"
+                   accessType="inputOutput"
+                   value="false"/>
+				        <field name="enabledSlider"
+                   type="SFBool"
+                   accessType="inputOutput"
+                   value="true"/>
+				        <field name="script" type="SFNode" accessType="outputOnly"/>
+			      </ProtoInterface>
+			      <ProtoBody>
+				        <ProtoDeclare name="Button">
+					          <ProtoInterface>
+						            <field name="NumOut" type="SFInt32" accessType="outputOnly" value="0"/>
+						            <field name="fix"
+                         type="SFBool"
+                         accessType="initializeOnly"
+                         value="false"/>
+						            <field name="Num" type="SFInt32" accessType="initializeOnly" value="0"/>
+						            <field name="Trans"
+                         type="SFVec3f"
+                         accessType="initializeOnly"
+                         value="0 0 0"/>
+						            <field name="Dim"
+                         type="SFVec3f"
+                         accessType="initializeOnly"
+                         value="0.025 0.0065 1"/>
+						            <field name="mTx"
+                         type="SFVec3f"
+                         accessType="initializeOnly"
+                         value="0.017 0.017 0.017"/>
+						            <field name="enabled"
+                         type="SFBool"
+                         accessType="inputOutput"
+                         value="true"/>
+						            <field name="maxE"
+                         type="SFFloat"
+                         accessType="initializeOnly"
+                         value="0"/>
+						            <field name="touchTime"
+                         type="SFTime"
+                         accessType="outputOnly"
+                         value="0"/>
+						            <field name="length"
+                         type="MFFloat"
+                         accessType="initializeOnly"
+                         value=""/>
+						            <field name="justify"
+                         type="MFString"
+                         accessType="initializeOnly"
+                         value="&amp;quot;MIDDLE&amp;quot; &amp;quot;MIDDLE&amp;quot; "/>
+						            <field name="tr_txt"
+                         type="SFVec3f"
+                         accessType="initializeOnly"
+                         value="0 0.0005 0.001"/>
+						            <field name="appearance" type="SFNode" accessType="inputOutput">
+							              <Appearance>
+								                <Material containerField="material"
+                                  diffuseColor="0 0 0"
+                                  emissiveColor="1 1 1"/>
+							              </Appearance>
+						            </field>
+						            <field name="children" type="MFNode" accessType="inputOutput"/>
+						            <field name="chRot"
+                         type="SFRotation"
+                         accessType="initializeOnly"
+                         value="0 0 1 0"/>
+						            <field name="rmk" type="SFInt32" accessType="initializeOnly" value="0"/>
+						            <field name="HLt" type="SFInt32" accessType="inputOutput" value="0"/>
+						            <field name="overC"
+                         type="SFBool"
+                         accessType="initializeOnly"
+                         value="true"/>
+						            <field name="txC"
+                         type="SFColor"
+                         accessType="inputOutput"
+                         value="0 0 0"/>
+						            <field name="hlC"
+                         type="SFColor"
+                         accessType="inputOutput"
+                         value="0.8 0.8 1"/>
+						            <field name="hlH"
+                         type="SFColor"
+                         accessType="inputOutput"
+                         value="0.8 0.9 1"/>
+						            <field name="lnC"
+                         type="SFColor"
+                         accessType="inputOutput"
+                         value="0 0 0"/>
+						            <field name="swH" type="SFInt32" accessType="outputOnly" value="0"/>
+						            <field name="Fsize"
+                         type="SFFloat"
+                         accessType="initializeOnly"
+                         value="0.006"/>
+						            <field name="spacing"
+                         type="SFFloat"
+                         accessType="initializeOnly"
+                         value="1"/>
+						            <field name="reset" type="SFInt32" accessType="inputOnly" value="0"/>
+						            <field name="buttonGeom" type="SFNode" accessType="inputOutput"/>
+					          </ProtoInterface>
+					          <ProtoBody>
+						            <Transform>
+							              <Group containerField="children">
+								                <TouchSensor DEF="TSens" containerField="children">
+									                  <IS>
+										                    <connect nodeField="enabled" protoField="enabled"/>
+										                    <connect nodeField="touchTime" protoField="touchTime"/>
+									                  </IS>
+								                </TouchSensor>
+								                <Transform containerField="children">
+									                  <ProtoInstance name="SwitchVRML" DEF="swH">
+										                    <IS>
+											                      <connect nodeField="whichChoice" protoField="HLt"/>
+										                    </IS>
+										                    <fieldValue name="choice">
+											                      <ProtoInstance name="SwitchVRML" DEF="OvSw">
+												                        <fieldValue name="whichChoice" value="0"/>
+												                        <fieldValue name="choice">
+													                          <Shape>
+														                            <IndexedFaceSet DEF="IFSb2" containerField="geometry" coordIndex="3 2 1 0 -1">
+															                              <Coordinate DEF="Cb1"
+                                                         containerField="coord"
+                                                         point="-0.5 -0.5 0, -0.5 0.5 0, 0.5 0.5 0, 0.5 -0.5 0"/>
+														                            </IndexedFaceSet>
+														                            <IS>
+															                              <connect nodeField="appearance" protoField="appearance"/>
+														                            </IS>
+													                          </Shape>
+													                          <Shape>
+														                            <Appearance containerField="appearance">
+															                              <Material containerField="material" diffuseColor="0 0 0">
+																                                <IS>
+																	                                  <connect nodeField="emissiveColor" protoField="hlH"/>
+																                                </IS>
+															                              </Material>
+														                            </Appearance>
+														                            <IndexedFaceSet USE="IFSb2" containerField="geometry"/>
+													                          </Shape>
+												                        </fieldValue>
+											                      </ProtoInstance>
+											                      <Shape>
+												                        <Appearance containerField="appearance">
+													                          <Material containerField="material" diffuseColor="0 0 0">
+														                            <IS>
+															                              <connect nodeField="emissiveColor" protoField="hlC"/>
+														                            </IS>
+													                          </Material>
+												                        </Appearance>
+												                        <IndexedFaceSet USE="IFSb2" containerField="geometry"/>
+											                      </Shape>
+										                    </fieldValue>
+									                  </ProtoInstance>
+									                  <ProtoInstance name="SwitchVRML">
+										                    <IS>
+											                      <connect nodeField="whichChoice" protoField="rmk"/>
+										                    </IS>
+										                    <fieldValue name="choice">
+											                      <Transform translation="0 0 0.0001">
+												                        <Shape containerField="children">
+													                          <Appearance containerField="appearance">
+														                            <Material containerField="material" diffuseColor="0 0 0">
+															                              <IS>
+																                                <connect nodeField="emissiveColor" protoField="lnC"/>
+															                              </IS>
+														                            </Material>
+													                          </Appearance>
+													                          <IndexedLineSet containerField="geometry"/>
+												                        </Shape>
+											                      </Transform>
+										                    </fieldValue>
+									                  </ProtoInstance>
+									                  <IS>
+										                    <connect nodeField="scale" protoField="Dim"/>
+									                  </IS>
+								                </Transform>
+								                <Transform containerField="children">
+									                  <Shape containerField="children">
+										                    <Appearance containerField="appearance">
+											                      <Material containerField="material" diffuseColor="0 0 0">
+												                        <IS>
+													                          <connect nodeField="emissiveColor" protoField="txC"/>
+												                        </IS>
+											                      </Material>
+										                    </Appearance>
+										                    <IS>
+											                      <connect nodeField="geometry" protoField="buttonGeom"/>
+										                    </IS>
+									                  </Shape>
+									                  <IS>
+										                    <connect nodeField="scale" protoField="mTx"/>
+										                    <connect nodeField="translation" protoField="tr_txt"/>
+									                  </IS>
+								                </Transform>
+							              </Group>
+							              <IS>
+								                <connect nodeField="translation" protoField="Trans"/>
+							              </IS>
+						            </Transform>
+						            <ROUTE fromNode="Scr2" fromField="crd1" toNode="Cb1" toField="point"/>
+						            <ROUTE fromNode="TSens"
+                         fromField="touchTime"
+                         toNode="Scr2"
+                         toField="ThTm"/>
+						            <ROUTE fromNode="Scr2"
+                         fromField="ovC"
+                         toNode="OvSw"
+                         toField="whichChoice"/>
+						            <ROUTE fromNode="Scr2"
+                         fromField="swH"
+                         toNode="swH"
+                         toField="whichChoice"/>
+						            <ROUTE fromNode="TSens" fromField="isOver" toNode="Scr2" toField="Ts"/>
+					          </ProtoBody>
+				        </ProtoDeclare>
+				        <ProtoDeclare name="protoMFNode">
+					          <ProtoInterface>
+						            <field name="_" type="MFNode" accessType="inputOutput"/>
+					          </ProtoInterface>
+					          <ProtoBody>
+						            <Group/>
+					          </ProtoBody>
+				        </ProtoDeclare>
+				        <ProtoDeclare name="protoSFBool">
+					          <ProtoInterface>
+						            <field name="_" type="SFBool" accessType="inputOutput" value="false"/>
+					          </ProtoInterface>
+					          <ProtoBody>
+						            <Group/>
+					          </ProtoBody>
+				        </ProtoDeclare>
+				        <ProtoDeclare name="protoSFFloat">
+					          <ProtoInterface>
+						            <field name="_" type="SFFloat" accessType="inputOutput" value="0"/>
+					          </ProtoInterface>
+					          <ProtoBody>
+						            <Group/>
+					          </ProtoBody>
+				        </ProtoDeclare>
+				        <ProtoDeclare name="protoSFInt32">
+					          <ProtoInterface>
+						            <field name="_" type="SFInt32" accessType="inputOutput" value="0"/>
+					          </ProtoInterface>
+					          <ProtoBody>
+						            <Group/>
+					          </ProtoBody>
+				        </ProtoDeclare>
+				        <ProtoDeclare name="protoSFNode">
+					          <ProtoInterface>
+						            <field name="_" type="SFNode" accessType="inputOutput"/>
+					          </ProtoInterface>
+					          <ProtoBody>
+						            <Group/>
+					          </ProtoBody>
+				        </ProtoDeclare>
+				        <ProtoDeclare name="Slider">
+					          <ProtoInterface>
+						            <field name="appearance" type="SFNode" accessType="inputOutput"/>
+						            <field name="appearanceLn" type="SFNode" accessType="inputOutput"/>
+						            <field name="outPosition"
+                         type="SFFloat"
+                         accessType="outputOnly"
+                         value="0"/>
+						            <field name="setPosition"
+                         type="SFFloat"
+                         accessType="inputOnly"
+                         value="0"/>
+						            <field name="translation"
+                         type="SFVec3f"
+                         accessType="inputOutput"
+                         value="0 0 0"/>
+						            <field name="scale"
+                         type="SFVec3f"
+                         accessType="inputOutput"
+                         value="1 1 1"/>
+						            <field name="SwitchIndicator"
+                         type="SFInt32"
+                         accessType="inputOutput"
+                         value="0"/>
+						            <field name="enabled"
+                         type="SFBool"
+                         accessType="inputOutput"
+                         value="false"/>
+					          </ProtoInterface>
+					          <ProtoBody>
+						            <Transform>
+							              <Shape containerField="children">
+								                <Appearance DEF="mRed" containerField="appearance">
+									                  <Material containerField="material" emissiveColor="1 0 0"/>
+								                </Appearance>
+								                <IndexedLineSet containerField="geometry"/>
+							              </Shape>
+							              <Transform DEF="TR" containerField="children">
+								                <Transform containerField="children" translation="0 0 -5E-05">
+									                  <Shape containerField="children">
+										                    <IndexedFaceSet containerField="geometry" coordIndex="3 2 1 0 -1">
+											                      <Coordinate DEF="CRD"
+                                             containerField="coord"
+                                             point="0.002 0.0015 0, 0.002 -0.0015 0, -0.002 -0.0015 0, -0.002 0.0015 0"/>
+										                    </IndexedFaceSet>
+										                    <IS>
+											                      <connect nodeField="appearance" protoField="appearance"/>
+										                    </IS>
+									                  </Shape>
+								                </Transform>
+								                <Transform containerField="children" translation="0 0 -1E-05">
+									                  <Shape containerField="children">
+										                    <Appearance containerField="appearance">
+											                      <Material containerField="material" diffuseColor="0 0 0"/>
+										                    </Appearance>
+										                    <IndexedLineSet containerField="geometry"/>
+									                  </Shape>
+								                </Transform>
+								                <Transform containerField="children"
+                                   scale="0.01 0.008 0.008"
+                                   translation="0 0 -1E-05">
+									                  <ProtoInstance name="SwitchVRML">
+										                    <IS>
+											                      <connect nodeField="whichChoice" protoField="SwitchIndicator"/>
+										                    </IS>
+										                    <fieldValue name="choice">
+											                      <Shape>
+												                        <Appearance DEF="M_Ln" containerField="appearance">
+													                          <Material containerField="material" diffuseColor="1 0 0"/>
+												                        </Appearance>
+												                        <IndexedFaceSet containerField="geometry" coordIndex="3 2 1 0 -1">
+													                          <Coordinate containerField="coord"
+                                                   point="-0.11 -0.11 0, -0.11 0.11 0, 0.11 0.11 0, 0.11 -0.11 0"/>
+												                        </IndexedFaceSet>
+											                      </Shape>
+											                      <Shape>
+												                        <Appearance USE="M_Ln" containerField="appearance"/>
+												                        <IndexedFaceSet containerField="geometry" coordIndex="0 1 2 -1">
+													                          <Coordinate containerField="coord" point="0.15 0 0, -0.1 0.14 0, -0.1 -0.14 0"/>
+												                        </IndexedFaceSet>
+											                      </Shape>
+											                      <Shape>
+												                        <Appearance USE="M_Ln" containerField="appearance"/>
+												                        <IndexedFaceSet containerField="geometry"
+                                                    coordIndex="2 3 0 -1 1 2 0 -1 6 7 4 -1 5 6 4 -1">
+													                          <Coordinate containerField="coord"
+                                                   point="-0.03 0.12 0, -0.12 0.12 0, -0.12 -0.12 0, -0.03 -0.12 0, 0.12 0.12 0, 0.03 0.12 0, 0.03 -0.12 0, 0.12 -0.12 0"/>
+												                        </IndexedFaceSet>
+											                      </Shape>
+										                    </fieldValue>
+									                  </ProtoInstance>
+								                </Transform>
+							              </Transform>
+							              <PlaneSensor DEF="PS" containerField="children">
+								                <IS>
+									                  <connect nodeField="enabled" protoField="enabled"/>
+								                </IS>
+							              </PlaneSensor>
+							              <IS>
+								                <connect nodeField="scale" protoField="scale"/>
+								                <connect nodeField="translation" protoField="translation"/>
+							              </IS>
+						            </Transform>
+						            <ROUTE fromNode="SC" fromField="offset" toNode="PS" toField="offset"/>
+						            <ROUTE fromNode="SC"
+                         fromField="translation"
+                         toNode="TR"
+                         toField="translation"/>
+						            <ROUTE fromNode="PS"
+                         fromField="translation"
+                         toNode="SC"
+                         toField="translation"/>
+					          </ProtoBody>
+				        </ProtoDeclare>
+				        <ProtoInstance name="CollisionVRML">
+					          <fieldValue name="children">
+						            <ProximitySensor DEF="PSens"/>
+						            <Group DEF="Simulation_environment">
+							              <Viewpoint DEF="BaseViewpoint1" containerField="children">
+								                <IS>
+									                  <connect nodeField="orientation" protoField="base_VP_orientation"/>
+									                  <connect nodeField="position" protoField="base_VP_position"/>
+								                </IS>
+							              </Viewpoint>
+							              <Viewpoint DEF="BaseViewpoint2" containerField="children"/>
+						            </Group>
+						            <Transform DEF="ControlBar"
+                             rotation="-0.294553 -0.953573 -0.0627507 0.589211"
+                             translation="-73.4467 45.2063 358.128">
+							              <Transform DEF="HUDTrnsfrm"
+                                containerField="children"
+                                center="0 0 -0.15"
+                                scale="1.67259 1.67259 1.67259"
+                                translation="0 0 -0.100889">
+								                <Transform containerField="children" center="0 -0.0622 0" scale="0.8 0.8 1">
+									                  <ProtoInstance name="SwitchVRML" DEF="SliderSW">
+										                    <IS>
+											                      <connect nodeField="whichChoice" protoField="whichChoiceSlider"/>
+										                    </IS>
+										                    <fieldValue name="choice">
+											                      <Transform scale="0.7 1 1" translation="0 0.006 -0.15">
+												                        <ProtoInstance name="Slider" DEF="PS_Slider0">
+													                          <IS>
+														                            <connect nodeField="outPosition" protoField="onSliderMove"/>
+														                            <connect nodeField="enabled" protoField="enabledSlider"/>
+													                          </IS>
+													                          <fieldValue name="appearance">
+														                            <Appearance DEF="C1">
+															                              <Material containerField="material"
+                                                       diffuseColor="0 0 0"
+                                                       emissiveColor="1 1 1"
+                                                       transparency="0.7"/>
+														                            </Appearance>
+													                          </fieldValue>
+													                          <fieldValue name="translation" value="-0.07 -0.06 0"/>
+													                          <fieldValue name="scale" value="2 1 1"/>
+												                        </ProtoInstance>
+											                      </Transform>
+										                    </fieldValue>
+									                  </ProtoInstance>
+									                  <ProtoInstance name="SwitchVRML" DEF="XYZSW">
+										                    <IS>
+											                      <connect nodeField="whichChoice" protoField="whichChoiceXYZ"/>
+										                    </IS>
+										                    <fieldValue name="choice">
+											                      <Transform translation="0.031 0.043 -0.09">
+												                        <Transform DEF="XYZTR2"
+                                               containerField="children"
+                                               rotation="-0.294553 -0.953573 -0.0627507 -0.589211">
+													                          <Transform containerField="children">
+														                            <Group containerField="children">
+															                              <IS>
+																                                <connect nodeField="children" protoField="externalAxes"/>
+															                              </IS>
+														                            </Group>
+														                            <ProtoInstance name="SwitchVRML">
+															                              <IS>
+																                                <connect nodeField="whichChoice" protoField="whichChoiceStandardAxes"/>
+															                              </IS>
+															                              <fieldValue name="choice">
+																                                <Transform rotation="0.57735 -0.57735 0.57735 2.0944">
+																	                                  <Transform containerField="children" translation="-0.01 0 0">
+																		                                    <Billboard containerField="children" axisOfRotation="0 0 0">
+																			                                      <Shape containerField="children">
+																				                                        <Text containerField="geometry"/>
+																			                                      </Shape>
+																			                                      <Transform containerField="children"
+                                                                    scale="0.0054 1 1"
+                                                                    translation="-0.0028 -0.0004 -0.0001">
+																				                                        <Shape DEF="_Shp_for_bgr_000" containerField="children">
+																					                                          <Appearance containerField="appearance">
+																						                                            <Material containerField="material" diffuseColor="0 0 0" transparency="0.8"/>
+																					                                          </Appearance>
+																					                                          <IndexedFaceSet containerField="geometry" coordIndex="3 2 1 0 -1">
+																						                                            <Coordinate containerField="coord" point="0 0 0, 0 0.0025 0, 1 0.0025 0, 1 0 0"/>
+																					                                          </IndexedFaceSet>
+																				                                        </Shape>
+																			                                      </Transform>
+																		                                    </Billboard>
+																	                                  </Transform>
+																	                                  <Transform containerField="children" translation="0 -0.01 0">
+																		                                    <Billboard containerField="children" axisOfRotation="0 0 0">
+																			                                      <Shape containerField="children">
+																				                                        <Text containerField="geometry"/>
+																			                                      </Shape>
+																			                                      <Transform containerField="children"
+                                                                    scale="0.00624 1 1"
+                                                                    translation="-0.0032 -0.0004 -0.0001">
+																				                                        <Shape USE="_Shp_for_bgr_000" containerField="children"/>
+																			                                      </Transform>
+																		                                    </Billboard>
+																	                                  </Transform>
+																	                                  <Transform containerField="children" translation="0 0 -0.01">
+																		                                    <Billboard containerField="children" axisOfRotation="0 0 0">
+																			                                      <Shape containerField="children">
+																				                                        <Text containerField="geometry"/>
+																			                                      </Shape>
+																			                                      <Transform containerField="children"
+                                                                    scale="0.0042 1 1"
+                                                                    translation="-0.0021 -0.0004 -0.0001">
+																				                                        <Shape USE="_Shp_for_bgr_000" containerField="children"/>
+																			                                      </Transform>
+																		                                    </Billboard>
+																	                                  </Transform>
+																	                                  <Shape containerField="children">
+																		                                    <IndexedLineSet containerField="geometry"/>
+																	                                  </Shape>
+																                                </Transform>
+															                              </fieldValue>
+														                            </ProtoInstance>
+														                            <IS>
+															                              <connect nodeField="rotation" protoField="axes_rotation"/>
+														                            </IS>
+													                          </Transform>
+												                        </Transform>
+											                      </Transform>
+										                    </fieldValue>
+									                  </ProtoInstance>
+									                  <ProtoInstance name="SwitchVRML" DEF="ZOOMSW">
+										                    <IS>
+											                      <connect nodeField="whichChoice" protoField="whichChoiceZOOM"/>
+										                    </IS>
+										                    <fieldValue name="choice">
+											                      <ProtoInstance name="SwitchVRML" DEF="ZOOMSW2">
+												                        <IS>
+													                          <connect nodeField="whichChoice" protoField="whichChoiceZOOM2"/>
+												                        </IS>
+												                        <fieldValue name="choice">
+													                          <Transform center="-1.1 0 0"
+                                                  scale="1.253 1 1"
+                                                  translation="0.928 -0.096 -0.97">
+														                            <Transform containerField="children"
+                                                     scale="0.11 0.11 0.1"
+                                                     translation="-0.959 0.049 0.82">
+															                              <Transform containerField="children"
+                                                        rotation="0 0 1 -1.57"
+                                                        scale="1 1.2 1"
+                                                        translation="-0.022 0 0">
+																                                <Transform containerField="children" translation="-0.005111 -0.009789 0">
+																	                                  <Shape containerField="children">
+																		                                    <Appearance DEF="AppZoom" containerField="appearance">
+																			                                      <Material containerField="material" diffuseColor="0 0 0"/>
+																		                                    </Appearance>
+																		                                    <IndexedFaceSet containerField="geometry"
+                                                                      colorIndex="0 2 1 -1"
+                                                                      coordIndex="0 2 1 -1">
+																			                                      <Color containerField="color"
+                                                                color="1 1 1 0.502 0.502 0.7529 0.502 0.502 0.7529"/>
+																			                                      <Coordinate containerField="coord"
+                                                                     point="0.03496 -0.314 0, -0.01207 0.314 0, 0.03496 0.314 0"/>
+																		                                    </IndexedFaceSet>
+																	                                  </Shape>
+																                                </Transform>
+															                              </Transform>
+															                              <Transform containerField="children" translation="-0.03 0 0">
+																                                <Transform DEF="ZoomMover"
+                                                           containerField="children"
+                                                           translation="0.109433 0 0">
+																	                                  <Transform containerField="children" translation="-0.005 0.015 0">
+																		                                    <Transform containerField="children"
+                                                                 rotation="-1 0 0 -1.571"
+                                                                 translation="0.00458 -0.02003 0.02">
+																			                                      <Shape containerField="children">
+																				                                        <Appearance USE="AppZoom" containerField="appearance"/>
+																				                                        <IndexedFaceSet containerField="geometry"
+                                                                            colorIndex="0 1 2 -1 3 4 5 -1 6 4 7 -1 8 4 6 -1 5 4 8 -1"
+                                                                            coordIndex="0 1 2 -1 3 4 5 -1 6 4 7 -1 8 4 6 -1 5 4 8 -1">
+																					                                          <Color DEF="ZoomMoverColor"
+                                                                      containerField="color"
+                                                                      color="0.502 0.502 0.7529 0 0 0 0 0 0 0.502 0.502 0.7529 1 1 1 0.502 0.502 0.7529 0.502 0.502 0.7529 0.502 0.502 0.7529 1 1 1"/>
+																					                                          <Coordinate containerField="coord"
+                                                                           point="-0.02107 3.059E-05 0.0432, 0.02935 -3.059E-05 -0.04554, -0.008597 -3.059E-05 -0.04554, -0.01168 3.059E-05 0.03973, 0.04364 -3.059E-05 -0.05367, -0.0207 2.386E-05 0.04327, -0.00834 -2.535E-05 -0.04609, 0.005336 -3.059E-05 -0.0536, 0.03044 1.346E-05 -0.04616"/>
+																				                                        </IndexedFaceSet>
+																			                                      </Shape>
+																		                                    </Transform>
+																	                                  </Transform>
+																                                </Transform>
+																                                <PlaneSensor DEF="ZoomSence" containerField="children"/>
+															                              </Transform>
+														                            </Transform>
+													                          </Transform>
+												                        </fieldValue>
+											                      </ProtoInstance>
+										                    </fieldValue>
+									                  </ProtoInstance>
+									                  <ProtoInstance name="SwitchVRML" DEF="SwControlButtons">
+										                    <IS>
+											                      <connect nodeField="whichChoice" protoField="whichChoiceControlButtons"/>
+										                    </IS>
+										                    <fieldValue name="choice">
+											                      <Transform scale="0.81 0.81 1" translation="-0.0418 -0.05915 -0.15">
+												                        <ProtoInstance name="Button" DEF="ui_vcr_B_Play">
+													                          <fieldValue name="appearance">
+														                            <Appearance USE="C1"/>
+													                          </fieldValue>
+													                          <fieldValue name="hlC" value="0.95 0.95 1"/>
+													                          <fieldValue name="buttonGeom">
+														                            <IndexedFaceSet coordIndex="0 1 2 -1">
+															                              <Coordinate containerField="coord" point="0.15 0 0, -0.1 0.14 0, -0.1 -0.14 0"/>
+														                            </IndexedFaceSet>
+													                          </fieldValue>
+												                        </ProtoInstance>
+												                        <ProtoInstance name="Button" DEF="ui_vcr_B_Pause">
+													                          <fieldValue name="Trans" value="0.025 0 0"/>
+													                          <fieldValue name="appearance">
+														                            <Appearance USE="C1"/>
+													                          </fieldValue>
+													                          <fieldValue name="hlC" value="0.8 1 0.8"/>
+													                          <fieldValue name="buttonGeom">
+														                            <IndexedFaceSet coordIndex="2 3 0 -1 1 2 0 -1 6 7 4 -1 5 6 4 -1">
+															                              <Coordinate containerField="coord"
+                                                         point="-0.02 0.11 0, -0.12 0.11 0, -0.12 -0.11 0, -0.02 -0.11 0, 0.15 0.11 0, 0.05 0.11 0, 0.05 -0.11 0, 0.15 -0.11 0"/>
+														                            </IndexedFaceSet>
+													                          </fieldValue>
+												                        </ProtoInstance>
+												                        <ProtoInstance name="Button" DEF="ui_vcr_B_Stop">
+													                          <fieldValue name="Trans" value="0.05 0 0"/>
+													                          <fieldValue name="appearance">
+														                            <Appearance USE="C1"/>
+													                          </fieldValue>
+													                          <fieldValue name="hlC" value="0.95 0.95 1"/>
+													                          <fieldValue name="buttonGeom">
+														                            <IndexedFaceSet ccw="false" coordIndex="0 1 2 3 -1">
+															                              <Coordinate containerField="coord"
+                                                         point="-0.09 -0.11 0, -0.09 0.11 0, 0.12 0.11 0, 0.12 -0.11 0"/>
+														                            </IndexedFaceSet>
+													                          </fieldValue>
+												                        </ProtoInstance>
+												                        <ProtoInstance name="Button" DEF="ui_vcr_B_Prev">
+													                          <fieldValue name="Trans" value="0.078 0 0"/>
+													                          <fieldValue name="appearance">
+														                            <Appearance USE="C1"/>
+													                          </fieldValue>
+													                          <fieldValue name="hlC" value="0.95 0.95 1"/>
+													                          <fieldValue name="buttonGeom">
+														                            <IndexedFaceSet ccw="false" coordIndex="0 1 2 -1 3 4 5 -1">
+															                              <Coordinate containerField="coord"
+                                                         point="0.02 0 0, 0.27 0.14 0, 0.27 -0.14 0, -0.27 0 0, -0.01 0.14 0, -0.01 -0.14 0"/>
+														                            </IndexedFaceSet>
+													                          </fieldValue>
+												                        </ProtoInstance>
+												                        <ProtoInstance name="Button" DEF="ui_vcr_B_Next">
+													                          <fieldValue name="Trans" value="0.103 0 0"/>
+													                          <fieldValue name="appearance">
+														                            <Appearance USE="C1"/>
+													                          </fieldValue>
+													                          <fieldValue name="hlC" value="0.95 0.95 1"/>
+													                          <fieldValue name="buttonGeom">
+														                            <IndexedFaceSet coordIndex="0 1 2 -1 3 4 5 -1">
+															                              <Coordinate containerField="coord"
+                                                         point="0.27 0 0, 0.02 0.14 0, 0.02 -0.14 0, -0.01 0 0, -0.27 0.14 0, -0.27 -0.14 0"/>
+														                            </IndexedFaceSet>
+													                          </fieldValue>
+												                        </ProtoInstance>
+											                      </Transform>
+										                    </fieldValue>
+									                  </ProtoInstance>
+								                </Transform>
+							              </Transform>
+						            </Transform>
+					          </fieldValue>
+					          <fieldValue name="collide" value="false"/>
+				        </ProtoInstance>
+				        <ROUTE fromNode="PS_Slider0"
+                   fromField="outPosition"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="ScrollSlider"/>
+				        <ROUTE fromNode="ZoomSence"
+                   fromField="translation"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="PosZoomSlider"/>
+				        <ROUTE fromNode="VCR_CONTROL_SCRIPT"
+                   fromField="on_vcr_state"
+                   toNode="PS_Slider0"
+                   toField="SwitchIndicator"/>
+				        <ROUTE fromNode="ZoomSence"
+                   fromField="isActive"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="slActive"/>
+				        <ROUTE fromNode="PSens"
+                   fromField="orientation"
+                   toNode="XYZScript"
+                   toField="orientation"/>
+				        <ROUTE fromNode="PSens"
+                   fromField="orientation"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="PS_rot"/>
+				        <ROUTE fromNode="PSens"
+                   fromField="orientation"
+                   toNode="ControlBar"
+                   toField="rotation"/>
+				        <ROUTE fromNode="BaseViewpoint2"
+                   fromField="position"
+                   toNode="XYZScript"
+                   toField="position"/>
+				        <ROUTE fromNode="ZoomSence"
+                   fromField="enabled"
+                   toNode="XYZScript"
+                   toField="activeZoom"/>
+				        <ROUTE fromNode="ui_vcr_B_Play"
+                   fromField="touchTime"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="vcr_play_old"/>
+				        <ROUTE fromNode="PSens"
+                   fromField="position"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="PS_pos"/>
+				        <ROUTE fromNode="PSens"
+                   fromField="position"
+                   toNode="ControlBar"
+                   toField="translation"/>
+				        <ROUTE fromNode="BaseViewpoint1"
+                   fromField="position"
+                   toNode="XYZScript"
+                   toField="position"/>
+				        <ROUTE fromNode="ui_vcr_B_Prev"
+                   fromField="touchTime"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="vcr_backward"/>
+				        <ROUTE fromNode="ui_vcr_B_Pause"
+                   fromField="touchTime"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="vcr_pause"/>
+				        <ROUTE fromNode="ui_vcr_B_Stop"
+                   fromField="touchTime"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="vcr_stop"/>
+				        <ROUTE fromNode="ui_vcr_B_Next"
+                   fromField="touchTime"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="vcr_forward"/>
+				        <ROUTE fromNode="DelayTimer"
+                   fromField="cycleTime"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="cycleTimeDelay"/>
+				        <ROUTE fromNode="FFTimer"
+                   fromField="cycleTime"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="cycleTimeFF"/>
+				        <ROUTE fromNode="ExtraFastTimer"
+                   fromField="cycleTime"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="cycleTimeFast"/>
+				        <ROUTE fromNode="AnimationTimer2"
+                   fromField="isActive"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="cycleTime2"/>
+				        <ROUTE fromNode="VPTimer2"
+                   fromField="isActive"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="cycleTimeVP2"/>
+				        <ROUTE fromNode="VPTimer1"
+                   fromField="isActive"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="cycleTimeVP1"/>
+				        <ROUTE fromNode="VCRTimer"
+                   fromField="cycleTime"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="onVCRTimer"/>
+				        <ROUTE fromNode="AnimationTimer1"
+                   fromField="isActive"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="cycleTime1"/>
+				        <ROUTE fromNode="AnimationTimer2"
+                   fromField="fraction"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="time_fraction2"/>
+				        <ROUTE fromNode="AnimationTimer1"
+                   fromField="fraction"
+                   toNode="VCR_CONTROL_SCRIPT"
+                   toField="time_fraction1"/>
+			      </ProtoBody>
+		    </ProtoDeclare>
+		    <ProtoDeclare name="WorldInfo0">
+			      <ProtoInterface>
+				        <field name="info" type="MFString" accessType="inputOutput" value=""/>
+				        <field name="title" type="SFString" accessType="inputOutput"/>
+			      </ProtoInterface>
+			      <ProtoBody>
+				        <Group/>
+			      </ProtoBody>
+		    </ProtoDeclare>
+		    <ProtoInstance name="Procedure">
+			      <fieldValue name="id" value="r54311daa-6471-4634-a5e6-155dfb438d88"/>
+		    </ProtoInstance>
+	  </Scene>
+</X3D>
