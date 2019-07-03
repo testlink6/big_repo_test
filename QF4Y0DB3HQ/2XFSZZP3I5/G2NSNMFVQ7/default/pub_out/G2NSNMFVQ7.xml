@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<topic>
+  <title>Trunk loading</title>
+  <animated-procedure id="r54311daa-6471-4634-a5e6-5e6c117fa777">
+    <title id="CAP0e6ba25c-a8a1-45fb-a957-7ecaaf3074f2d">Trunk loading capacity</title>
+    <taskbody>
+      <context><![CDATA[<div class="ContextContent"/>]]></context>
+      <steps>
+        <step id="CAP0e6ba25c-a8a1-45fb-a957-990c28cbfde4">
+          <cmd>Open rear doors and trunk</cmd>
+          <info><![CDATA[<div class="StepInfo">To make the luggage compartment larger, you need access to the interior.</div>]]></info>
+        </step>
+        <step id="CAP0e6ba25c-a8a1-45fb-a957-e0b23c0d61af">
+          <cmd>Folding seat backrest forward</cmd>
+          <info><![CDATA[<div class="StepInfo">
+                     <ol>
+                        <li>Slide the headrest down.</li>
+                        <li>Disengage retractable cover from the seat.</li>
+                        <li>Pull up release lever and fold the backrest forward.</li>
+                        <li>The backrest must engage audibly in the lowered position. Adjust the fore-and-aft position of the seats to do this if necessary.</li>
+                     </ol>
+                     <p>
+                        <b>Information</b>
+                     </p>The backrests on the left and middle seats are joined together. When you fold the left backrest forward, the middle backrest will also fold over.</div>]]></info>
+        </step>
+        <step id="CAP0e6ba25c-a8a1-45fb-a957-c2c3665db00f">
+          <cmd>Close rear doors and trunk</cmd>
+          <info><![CDATA[<div class="StepInfo">The luggage compartment is now larger and ready to be loaded.</div>]]></info>
+        </step>
+      </steps>
+    </taskbody>
+    <animation-links>
+      <media-3d href="res://Trunk_loading_capacity5143.x3d" />
+      <tracking-config href="res://zip38725081_Trunk_loading_capacity5143.zip" />
+    </animation-links>
+  </animated-procedure>
+</topic>
