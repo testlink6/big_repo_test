@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE animated-procedure PUBLIC "-//Bosch//DTD DITA AR Topic//EN" "artopic.dtd">
+<animated-procedure id="r54311daa-6471-4634-a5e6-33814c9b73e0">
+	<title id="CAP0e6ba25c-a8a1-45fb-a957-1e3db91657d12">Open the Door</title>
+	<taskbody>
+		<context></context>
+		<steps><step id="CAP0e6ba25c-a8a1-45fb-a957-32c656018a7e"><cmd>Open</cmd></step><step id="CAP0e6ba25c-a8a1-45fb-a957-6660baaf2b90"><cmd>Close</cmd></step><step id="CAP0e6ba25c-a8a1-45fb-a957-9d693faadc2d"><cmd>Special</cmd></step></steps></taskbody>
+	<animation-links>
+<media-3d href="res://Open_the_Door8882.x3d" />
+<tracking-config href="res://zip76424069.zip" />
+
+</animation-links>
+</animated-procedure>
