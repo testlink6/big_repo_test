@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic>
+  <title>Door movements</title>
+  <animated-procedure id="r54311daa-6471-4634-a5e6-33814c9b73e0">
+    <title id="CAP0e6ba25c-a8a1-45fb-a957-1ee2874941b6a">Open the Door</title>
+    <taskbody>
+      <context><![CDATA[<div class="ContextContent"/>]]></context>
+      <steps>
+        <step id="CAP0e6ba25c-a8a1-45fb-a957-145f90f1dbde">
+          <cmd>Open</cmd>
+        </step>
+        <step id="CAP0e6ba25c-a8a1-45fb-a957-7d9922461274">
+          <cmd>Close</cmd>
+        </step>
+        <step id="CAP0e6ba25c-a8a1-45fb-a957-4a5407c0b546">
+          <cmd>Special</cmd>
+        </step>
+      </steps>
+    </taskbody>
+    <animation-links>
+      <media-3d href="res://Open_the_Door1503.x3d" />
+      <tracking-config href="res://PorscheTrackingMarker.zip" />
+    </animation-links>
+  </animated-procedure>
+  <information id="r54311daa-6471-4634-a5e6-ad33e09d006a">
+    <title id="CAP0e6ba25c-a8a1-45fb-a957-fa2643b412f00">Ino</title>
+    <infobody>
+      <infobox>
+        <title id="CAP0e6ba25c-a8a1-45fb-a957-d877a7710cda9">xxxx</title>
+        <note type=""><![CDATA[<div class="NoteContent">dsfuh sdahf sdliuhg dsifu hgdfsaiu </div>]]></note>
+      </infobox>
+    </infobody>
+  </information>
+</topic>

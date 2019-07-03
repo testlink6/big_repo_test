@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Created by VME v.9.1.0.0 (build 9.1.0.456 (64-bit))-->
+<SimulationInteractivity xmlns="http://services.parallelgraphics.com/vm/mmr/vm-interactivity-xml/all">
+	<SimulationInformation>
+		<ExporterVersionNumber>9.1.0.456 (64-bit)</ExporterVersionNumber>
+		<ModificationDate>04/12/18</ModificationDate>
+		<SpecID>DITA_1.1_TASK_AR</SpecID>
+		<SpecVersion>2.1</SpecVersion>
+		<SpecLang>en</SpecLang>
+		<XMLFileName>temp</XMLFileName>
+		<FileName>temp</FileName>
+		<DocumentFile>temp.xml</DocumentFile>
+		<Options>
+			<Value name="3DFramePosition">Right</Value>
+			<Value name="3DFrameSize">60</Value>
+			<Value name="AutoRepeat">No</Value>
+			<Value name="Background3DColor">#8080C0</Value>
+			<Value name="CoordinateResolution">0</Value>
+			<Value name="HighlightedStepColor">#FFA07A</Value>
+			<Value name="MessageBoxAsWindow">No</Value>
+			<Value name="RemoveSpace">No</Value>
+			<Value name="SelectedFrameColor">#FF0000</Value>
+			<Value name="ShowAxes">Yes</Value>
+			<Value name="ShowNavigationBar">No</Value>
+			<Value name="ShowPrevNextButtons">Yes</Value>
+			<Value name="ShowFreezeCheckbox">Yes</Value>
+			<Value name="ShowSmoothControl">Yes</Value>
+			<Value name="ShowSpeedSelection">Yes</Value>
+			<Value name="ShowZoomControl">Yes</Value>
+			<Value name="SimplifyFloats">No</Value>
+			<Value name="SkinID">{0650E9E3-1999-45C1-A24F-50BBE472326B}</Value>
+			<Value name="StartAfterLoading">No</Value>
+			<Value name="VRMLProfile">3</Value>
+			<Value name="X3D">Yes</Value>
+			<Value name="ForceDirectX">Yes</Value>
+		</Options>
+		<metadata/>
+	</SimulationInformation>
+	<Simulation id="r54311daa-6471-4634-a5e6-155dfb438d88">
+		<Description/>
+	</Simulation>
+	<Procedure id="r54311daa-6471-4634-a5e6-155dfb438d88"/>
+	<DocItems/>
+	<Resources/>
+</SimulationInteractivity>

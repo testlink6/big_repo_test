@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE animated-procedure PUBLIC "-//Bosch//DTD DITA AR Topic//EN" "artopic.dtd">
+<animated-procedure id="r54311daa-6471-4634-a5e6-5e6c117fa777">
+	<title>Trunk loading capacity</title>
+	<taskbody>
+		<context></context>
+		<steps><step><cmd>Open rear doors and trunk</cmd><info>To make the luggage compartment larger, you need access to the interior.</info></step><step><cmd>Folding seat backrest forward</cmd><info><ol><li>Slide the headrest down.</li><li>Disengage retractable cover from the seat.</li><li>Pull up release lever and fold the backrest forward.</li><li>The backrest must engage audibly in the lowered position. Adjust the fore-and-aft position of the seats to do this if necessary.</li></ol><p><b>Information</b></p>The backrests on the left and middle seats are joined together. When you fold the left backrest forward, the middle backrest will also fold over.</info></step><step><cmd>Close rear doors and trunk</cmd><info>The luggage compartment is now larger and ready to be loaded.</info></step></steps></taskbody>
+	<animation-links>
+ANIMLINKS
+</animation-links>
+</animated-procedure>

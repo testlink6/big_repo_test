@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE animated-procedure PUBLIC "-//Bosch//DTD DITA AR Topic//EN" "artopic.dtd">
+<animated-procedure id="r54311daa-6471-4634-a5e6-7485e12f7afd">
+	<title>Engine Maintenance</title>
+	<taskbody>
+		<context></context>
+		<steps><step><cmd>Opening Engine Compartment Lid</cmd><info><ol><li>Open the driver's door.</li><li>Pull the release lever.</li><li>Actuate the unlocking handle.</li><li>Open the engine compartment lid fully.</li></ol><form action="http://192.168.1.104:3000/tests" id="Hood_Test" name="Hood_Test"><input type="hidden" value="Porsche" name="customer"></input><cap-multistate name="hood" text="check the state of the hood" value="0"><state outputclass="unknown" text="unknown">Check carefully</state><state outputclass="ok" text="ok">You are all set</state><state outputclass="nok" text="malfunction">Oh my! Tell us what's wrong<input name="failure" type="text"></input><input type="submit" data-jump="step/next" outputclass="capbt"></input></state></cap-multistate></form></info></step><step><cmd>Inspect the engine</cmd><info>Check if the second hand is moving faster than the minute hand and the minute hand faster than the hour hand.</info></step><step><cmd>Disassembling</cmd><info>Lift the engine out of the compartment lid for maintenance purposes.</info></step><step><cmd>Assembling</cmd><info><ol><li>Reassemble the engine and place the engine back into the compartment Lid.</li><li>Lower lid and let ot fall into the lock.</li><li>Check that the lid has engaged correctly in the lock and that the release lever is back in its initial position.</li></ol></info></step></steps></taskbody>
+	<animation-links>
+ANIMLINKS
+</animation-links>
+</animated-procedure>

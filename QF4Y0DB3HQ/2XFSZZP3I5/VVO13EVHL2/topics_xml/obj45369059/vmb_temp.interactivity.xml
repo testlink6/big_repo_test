@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Created by VME v.9.1.0.0 (build 9.1.0.456 (64-bit))-->
+<SimulationInteractivity xmlns="http://services.parallelgraphics.com/vm/mmr/vm-interactivity-xml/all">
+	<SimulationInformation>
+		<ExporterVersionNumber>9.1.0.456 (64-bit)</ExporterVersionNumber>
+		<ModificationDate>04/03/18</ModificationDate>
+		<SpecID>DITA_1.1_TASK_AR</SpecID>
+		<SpecVersion>2.1</SpecVersion>
+		<SpecLang>en</SpecLang>
+		<XMLFileName>temp</XMLFileName>
+		<FileName>temp</FileName>
+		<DocumentFile>temp.xml</DocumentFile>
+		<Options>
+			<Value name="3DFramePosition">Right</Value>
+			<Value name="3DFrameSize">60</Value>
+			<Value name="AutoRepeat">No</Value>
+			<Value name="Background3DColor">#8080C0</Value>
+			<Value name="CoordinateResolution">0</Value>
+			<Value name="HighlightedStepColor">#FFA07A</Value>
+			<Value name="MessageBoxAsWindow">No</Value>
+			<Value name="RemoveSpace">No</Value>
+			<Value name="SelectedFrameColor">#FF0000</Value>
+			<Value name="ShowAxes">Yes</Value>
+			<Value name="ShowNavigationBar">No</Value>
+			<Value name="ShowPrevNextButtons">Yes</Value>
+			<Value name="ShowFreezeCheckbox">Yes</Value>
+			<Value name="ShowSmoothControl">Yes</Value>
+			<Value name="ShowSpeedSelection">Yes</Value>
+			<Value name="ShowZoomControl">Yes</Value>
+			<Value name="SimplifyFloats">No</Value>
+			<Value name="SkinID">{0650E9E3-1999-45C1-A24F-50BBE472326B}</Value>
+			<Value name="StartAfterLoading">No</Value>
+			<Value name="VRMLProfile">3</Value>
+			<Value name="X3D">Yes</Value>
+			<Value name="ForceDirectX">Yes</Value>
+		</Options>
+		<metadata/>
+	</SimulationInformation>
+	<Simulation id="r54311daa-6471-4634-a5e6-155dfb438d88">
+		<Description/>
+		<Step id="r7a776916-796d-497e-9135-994097a04c33">
+			<Description>1</Description>
+			<Substep id="rd0c236b0-55c0-46b3-8ffd-18664a14e002">
+				<Description>Rotate the DoorFrLeft</Description>
+			</Substep>
+			<Substep id="r5c592ad4-a606-45c1-9dcf-b3e8b1db61b7">
+				<Description>Point the camera to the DoorFrLeft</Description>
+			</Substep>
+		</Step>
+		<Step id="r12acc031-0b18-448c-963a-7ba72441dc39">
+			<Description>2</Description>
+			<Substep id="r763dc960-ef67-45a2-b400-bc925171abed">
+				<Description>Rotate the DoorFrLeft</Description>
+			</Substep>
+			<Substep id="r70a3c7df-b74e-4292-acee-a1399df7111c">
+				<Description>Point the camera to the DoorFrLeft</Description>
+			</Substep>
+		</Step>
+		<Step id="r5694b497-2ec6-4127-af88-16075737c600">
+			<Description>3</Description>
+			<Substep id="r8a56e3ab-d085-4091-bfa1-b35f7f2ef00c">
+				<Description>MOVE</Description>
+			</Substep>
+			<Substep id="ra2a39535-eadc-4666-bdad-f3033c3c839d">
+				<Description>Point the camera to the DoorFrLeft</Description>
+			</Substep>
+		</Step>
+	</Simulation>
+	<Procedure id="r54311daa-6471-4634-a5e6-155dfb438d88">
+		<Item id="r7a776916-796d-497e-9135-994097a04c33">
+			<Action id="rd0c236b0-55c0-46b3-8ffd-18664a14e002">
+				<metadata/>
+			</Action>
+			<Action id="r5c592ad4-a606-45c1-9dcf-b3e8b1db61b7">
+				<metadata/>
+			</Action>
+			<metadata/>
+		</Item>
+		<Item id="r12acc031-0b18-448c-963a-7ba72441dc39">
+			<Action id="r763dc960-ef67-45a2-b400-bc925171abed">
+				<metadata/>
+			</Action>
+			<Action id="r70a3c7df-b74e-4292-acee-a1399df7111c">
+				<metadata/>
+			</Action>
+			<metadata/>
+		</Item>
+		<Item id="r5694b497-2ec6-4127-af88-16075737c600">
+			<Action id="r8a56e3ab-d085-4091-bfa1-b35f7f2ef00c">
+				<metadata/>
+			</Action>
+			<Action id="ra2a39535-eadc-4666-bdad-f3033c3c839d">
+				<metadata/>
+			</Action>
+			<metadata/>
+		</Item>
+	</Procedure>
+	<DocItems>
+		<DocItem id="DoorFrRight_1f" objectID="2667707130592">
+			<metadata>
+				<value name="$UpdateTransform" decl-id="UPDATE_TRANSFORM_2867692E4DEE4801A8C3727F26EA48AE">-37.26 32.58 35.8 0.3937 0.0 0.0 0.0 0.3937 0.0 0.0 0.0 0.3937</value>
+				<value name="DocID" decl-id="DocID">DoorFrRight</value>
+			</metadata>
+		</DocItem>
+		<DocItem id="WheelFrLeft_26" objectID="2667707131712">
+			<metadata>
+				<value name="$UpdateTransform" decl-id="UPDATE_TRANSFORM_2867692E4DEE4801A8C3727F26EA48AE">30.48 15.46 57.34 0.3937 0.0 0.0 0.0 0.3937 0.0 0.0 0.0 0.3937</value>
+				<value name="DocID" decl-id="DocID">WheelFrLeft</value>
+			</metadata>
+		</DocItem>
+		<DocItem id="BodyHood_2a" objectID="2667707128992">
+			<metadata>
+				<value name="$UpdateTransform" decl-id="UPDATE_TRANSFORM_2867692E4DEE4801A8C3727F26EA48AE">-1.294E-5 46.94 40.81 0.3937 0.0 0.0 0.0 0.3937 0.0 0.0 0.0 0.3937</value>
+				<value name="DocID" decl-id="DocID">BodyHood</value>
+			</metadata>
+		</DocItem>
+		<DocItem id="DoorFrLeft_31" objectID="2667707133872">
+			<metadata>
+				<value name="$UpdateTransform" decl-id="UPDATE_TRANSFORM_2867692E4DEE4801A8C3727F26EA48AE">37.26 32.58 35.8 0.3937 0.0 0.0 0.0 0.3937 0.0 0.0 0.0 0.3937</value>
+				<value name="DocID" decl-id="DocID">DoorFrLeft</value>
+			</metadata>
+		</DocItem>
+		<DocItem id="DoorBack_33" objectID="2667707131072">
+			<metadata>
+				<value name="$UpdateTransform" decl-id="UPDATE_TRANSFORM_2867692E4DEE4801A8C3727F26EA48AE">0.0 64.53 -65.66 0.3937 0.0 0.0 0.0 0.3937 0.0 0.0 0.0 0.3937</value>
+				<value name="DocID" decl-id="DocID">DoorBack</value>
+			</metadata>
+		</DocItem>
+		<DocItem id="NewMarker_08_upright_flippedPlane_wrl_37" objectID="2667707129232">
+			<metadata>
+				<value name="DocID" decl-id="DocID">Marker</value>
+				<value name="Marker" decl-id="_1D527E0C476A4F7BB943A050B80708C0">-1</value>
+			</metadata>
+		</DocItem>
+	</DocItems>
+	<Resources/>
+</SimulationInteractivity>

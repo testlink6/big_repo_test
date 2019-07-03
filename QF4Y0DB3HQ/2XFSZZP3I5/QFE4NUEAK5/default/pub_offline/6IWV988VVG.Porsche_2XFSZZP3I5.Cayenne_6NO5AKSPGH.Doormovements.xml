@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic>
+  <title>Tire inspection</title>
+  <animated-procedure id="r54311daa-6471-4634-a5e6-33814c9b73e0">
+    <title id="CAP0e6ba25c-a8a1-45fb-a957-20a38359c3cd0">Changing the Wheel</title>
+    <taskbody>
+      <context><![CDATA[<div class="ContextContent"/>]]></context>
+      <steps>
+        <step id="CAP0e6ba25c-a8a1-45fb-a957-82a48b8df3a0">
+          <cmd>Unmount the Wheel</cmd>
+        </step>
+        <step id="CAP0e6ba25c-a8a1-45fb-a957-6166a70fbfd8">
+          <cmd>Mount the Wheel</cmd>
+        </step>
+      </steps>
+    </taskbody>
+    <animation-links>
+      <media-3d href="res://Changing_the_Wheel2302.x3d" />
+      <tracking-config href="res://zip23038252.zip" />
+    </animation-links>
+  </animated-procedure>
+</topic>

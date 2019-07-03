@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic>
+  <title>Engine maintenance</title>
+  <animated-procedure id="r54311daa-6471-4634-a5e6-7485e12f7afd">
+    <title id="CAP0e6ba25c-a8a1-45fb-a957-85c67f9239f73">Engine Maintenance</title>
+    <taskbody>
+      <context><![CDATA[<div class="ContextContent"/>]]></context>
+      <steps>
+        <step id="CAP0e6ba25c-a8a1-45fb-a957-80d44144bc32">
+          <cmd>Opening Engine Compartment Lid</cmd>
+          <info id="CAP0e6ba25c-a8a1-45fb-a957-7d4dc4d8810d"><![CDATA[<div class="StepInfo">
+                     <ol>
+                        <li>Open the driver's door.</li>
+                        <li>Pull the release lever.</li>
+                        <li>Actuate the unlocking handle.</li>
+                        <li>Open the engine compartment lid fully.</li>
+                     </ol>
+                     <form action="http://192.168.1.104:3000/tests"
+                           id="Hood_Test"
+                           name="Hood_Test">
+                        <input type="hidden" value="Porsche" name="customer"/>
+                        <cap-multistate name="hood" text="check the state of the hood" value="0">
+                           <state class="unknown" text="unknown">Check carefully</state>
+                           <state class="ok" text="ok">You are all set</state>
+                           <state class="nok" text="malfunction">Oh my! Tell us what's wrong<input name="failure" type="text"/>
+                              <input type="submit" data-jump="step/next" class="capbt"/>
+                           </state>
+                        </cap-multistate>
+                     </form>
+                  </div>]]></info>
+        </step>
+        <step id="CAP0e6ba25c-a8a1-45fb-a957-610f7ae6e483">
+          <cmd>Inspect the engine</cmd>
+          <info id="CAP0e6ba25c-a8a1-45fb-a957-7d2e66174c8f"><![CDATA[<div class="StepInfo">Check if the second hand is moving faster than the minute hand and the minute hand faster than the hour hand.</div>]]></info>
+        </step>
+        <step id="CAP0e6ba25c-a8a1-45fb-a957-4e809193a59b">
+          <cmd>Disassembling</cmd>
+          <info id="CAP0e6ba25c-a8a1-45fb-a957-e9c3881b9af2"><![CDATA[<div class="StepInfo">Lift the engine out of the compartment lid for maintenance purposes.</div>]]></info>
+        </step>
+        <step id="CAP0e6ba25c-a8a1-45fb-a957-0f98712c5904">
+          <cmd>Assembling</cmd>
+          <info id="CAP0e6ba25c-a8a1-45fb-a957-78cb25416531"><![CDATA[<div class="StepInfo">
+                     <ol>
+                        <li>Reassemble the engine and place the engine back into the compartment Lid.</li>
+                        <li>Lower lid and let ot fall into the lock.</li>
+                        <li>Check that the lid has engaged correctly in the lock and that the release lever is back in its initial position.</li>
+                     </ol>
+                  </div>]]></info>
+        </step>
+      </steps>
+    </taskbody>
+    <animation-links>
+      <media-3d href="res://Engine_Maintenance1171.x3d" />
+      <tracking-config href="res://zip23038252.zip" />
+    </animation-links>
+  </animated-procedure>
+</topic>

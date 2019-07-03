@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Created by VME v.9.1.0.0 (build 9.1.0.456 (64-bit))-->
+<SimulationInteractivity xmlns="http://services.parallelgraphics.com/vm/mmr/vm-interactivity-xml/all">
+	<SimulationInformation>
+		<ExporterVersionNumber>9.1.0.456 (64-bit)</ExporterVersionNumber>
+		<ModificationDate>04/11/18</ModificationDate>
+		<SpecID>DITA_1.1_TASK_AR</SpecID>
+		<SpecVersion>2.1</SpecVersion>
+		<SpecLang>en</SpecLang>
+		<XMLFileName>temp</XMLFileName>
+		<FileName>temp</FileName>
+		<DocumentFile>temp.xml</DocumentFile>
+		<Options>
+			<Value name="3DFramePosition">Right</Value>
+			<Value name="3DFrameSize">60</Value>
+			<Value name="AutoRepeat">No</Value>
+			<Value name="Background3DColor">#8080C0</Value>
+			<Value name="CoordinateResolution">0</Value>
+			<Value name="HighlightedStepColor">#FFA07A</Value>
+			<Value name="MessageBoxAsWindow">No</Value>
+			<Value name="RemoveSpace">No</Value>
+			<Value name="SelectedFrameColor">#FF0000</Value>
+			<Value name="ShowAxes">Yes</Value>
+			<Value name="ShowNavigationBar">No</Value>
+			<Value name="ShowPrevNextButtons">Yes</Value>
+			<Value name="ShowFreezeCheckbox">Yes</Value>
+			<Value name="ShowSmoothControl">Yes</Value>
+			<Value name="ShowSpeedSelection">Yes</Value>
+			<Value name="ShowZoomControl">Yes</Value>
+			<Value name="SimplifyFloats">No</Value>
+			<Value name="SkinID">{0650E9E3-1999-45C1-A24F-50BBE472326B}</Value>
+			<Value name="StartAfterLoading">No</Value>
+			<Value name="VRMLProfile">3</Value>
+			<Value name="X3D">Yes</Value>
+			<Value name="ForceDirectX">Yes</Value>
+		</Options>
+		<metadata/>
+	</SimulationInformation>
+	<Simulation id="r54311daa-6471-4634-a5e6-155dfb438d88">
+		<Description/>
+		<Step id="re91b7c05-a91b-43a6-8177-befd1d80777a">
+			<Description>1</Description>
+			<Substep id="rbb89d591-ae81-4e75-a7ff-e229801c8e32">
+				<Description>Open the WheelFrRight</Description>
+			</Substep>
+			<Substep id="r443cb50d-dfbb-4eb7-8cec-4d9956ee653c">
+				<Description>Hide the WheelFrRight</Description>
+			</Substep>
+		</Step>
+		<Step id="r48c95861-1d35-4af4-8d65-cf2df5552ab8">
+			<Description>2</Description>
+			<Substep id="r7fc83ff2-c02b-4332-bccd-4351bca74a31">
+				<Description>Move the WheelFrRight</Description>
+			</Substep>
+			<Substep id="r8a06a4d9-1f7e-4c0b-bd3e-a19b280de98e">
+				<Description>Show the WheelFrRight</Description>
+			</Substep>
+			<Substep id="r3bc7c2f5-4b9f-45ff-8dbd-5f8dcf91db09">
+				<Description>Move the WheelFrRight</Description>
+			</Substep>
+			<Substep id="rb6b956ea-f859-43d1-bad0-8448f57bcb2c">
+				<Description>Point the camera to the Undercarriage</Description>
+			</Substep>
+		</Step>
+	</Simulation>
+	<Procedure id="r54311daa-6471-4634-a5e6-155dfb438d88">
+		<Item id="re91b7c05-a91b-43a6-8177-befd1d80777a">
+			<Action id="rbb89d591-ae81-4e75-a7ff-e229801c8e32">
+				<metadata/>
+			</Action>
+			<Action id="r443cb50d-dfbb-4eb7-8cec-4d9956ee653c">
+				<metadata/>
+			</Action>
+			<metadata/>
+		</Item>
+		<Item id="r48c95861-1d35-4af4-8d65-cf2df5552ab8">
+			<Action id="r7fc83ff2-c02b-4332-bccd-4351bca74a31">
+				<metadata/>
+			</Action>
+			<Action id="r8a06a4d9-1f7e-4c0b-bd3e-a19b280de98e">
+				<metadata/>
+			</Action>
+			<Action id="r3bc7c2f5-4b9f-45ff-8dbd-5f8dcf91db09">
+				<metadata/>
+			</Action>
+			<Action id="rb6b956ea-f859-43d1-bad0-8448f57bcb2c">
+				<metadata/>
+			</Action>
+			<metadata/>
+		</Item>
+	</Procedure>
+	<DocItems>
+		<DocItem id="DoorFrRight_1f" objectID="1247957818384">
+			<metadata>
+				<value name="$UpdateTransform" decl-id="UPDATE_TRANSFORM_2867692E4DEE4801A8C3727F26EA48AE">-37.26 32.58 35.8 0.3937 0.0 0.0 0.0 0.3937 0.0 0.0 0.0 0.3937</value>
+				<value name="DocID" decl-id="DocID">DoorFrRight</value>
+			</metadata>
+		</DocItem>
+		<DocItem id="WheelFrLeft_26" objectID="1247957818464">
+			<metadata>
+				<value name="$UpdateTransform" decl-id="UPDATE_TRANSFORM_2867692E4DEE4801A8C3727F26EA48AE">30.48 15.46 57.34 0.3937 0.0 0.0 0.0 0.3937 0.0 0.0 0.0 0.3937</value>
+				<value name="DocID" decl-id="DocID">WheelFrLeft</value>
+			</metadata>
+		</DocItem>
+		<DocItem id="BodyHood_2a" objectID="1247957819104">
+			<metadata>
+				<value name="$UpdateTransform" decl-id="UPDATE_TRANSFORM_2867692E4DEE4801A8C3727F26EA48AE">-1.294E-5 46.94 40.81 0.3937 0.0 0.0 0.0 0.3937 0.0 0.0 0.0 0.3937</value>
+				<value name="DocID" decl-id="DocID">BodyHood</value>
+			</metadata>
+		</DocItem>
+		<DocItem id="DoorFrLeft_31" objectID="1247957819504">
+			<metadata>
+				<value name="$UpdateTransform" decl-id="UPDATE_TRANSFORM_2867692E4DEE4801A8C3727F26EA48AE">37.26 32.58 35.8 0.3937 0.0 0.0 0.0 0.3937 0.0 0.0 0.0 0.3937</value>
+				<value name="DocID" decl-id="DocID">DoorFrLeft</value>
+			</metadata>
+		</DocItem>
+		<DocItem id="DoorBack_33" objectID="1247957821584">
+			<metadata>
+				<value name="$UpdateTransform" decl-id="UPDATE_TRANSFORM_2867692E4DEE4801A8C3727F26EA48AE">0.0 64.53 -65.66 0.3937 0.0 0.0 0.0 0.3937 0.0 0.0 0.0 0.3937</value>
+				<value name="DocID" decl-id="DocID">DoorBack</value>
+			</metadata>
+		</DocItem>
+		<DocItem id="NewMarker_08_upright_flippedPlane_wrl_37" objectID="1247957822384">
+			<metadata>
+				<value name="DocID" decl-id="DocID">Marker</value>
+				<value name="Marker" decl-id="_1D527E0C476A4F7BB943A050B80708C0">-1</value>
+			</metadata>
+		</DocItem>
+	</DocItems>
+	<Resources/>
+</SimulationInteractivity>

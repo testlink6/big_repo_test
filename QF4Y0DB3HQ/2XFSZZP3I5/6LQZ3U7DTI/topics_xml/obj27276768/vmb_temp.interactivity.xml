@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Created by VME v.9.1.0.0 (build 9.1.0.456 (64-bit))-->
+<SimulationInteractivity xmlns="http://services.parallelgraphics.com/vm/mmr/vm-interactivity-xml/all">
+	<SimulationInformation>
+		<ExporterVersionNumber>9.1.0.456 (64-bit)</ExporterVersionNumber>
+		<ModificationDate>04/12/18</ModificationDate>
+		<SpecID>DITA_1.1_TASK_AR</SpecID>
+		<SpecVersion>2.1</SpecVersion>
+		<SpecLang>en</SpecLang>
+		<XMLFileName>temp</XMLFileName>
+		<FileName>temp</FileName>
+		<DocumentFile>p_engine.xml</DocumentFile>
+		<Options>
+			<Value name="3DFramePosition">Right</Value>
+			<Value name="3DFrameSize">60</Value>
+			<Value name="AutoRepeat">No</Value>
+			<Value name="Background3DColor">#8080C0</Value>
+			<Value name="CoordinateResolution">0</Value>
+			<Value name="HighlightedStepColor">#FFA07A</Value>
+			<Value name="MessageBoxAsWindow">No</Value>
+			<Value name="RemoveSpace">No</Value>
+			<Value name="SelectedFrameColor">#FF0000</Value>
+			<Value name="ShowAxes">Yes</Value>
+			<Value name="ShowNavigationBar">No</Value>
+			<Value name="ShowPrevNextButtons">Yes</Value>
+			<Value name="ShowFreezeCheckbox">Yes</Value>
+			<Value name="ShowSmoothControl">Yes</Value>
+			<Value name="ShowSpeedSelection">Yes</Value>
+			<Value name="ShowZoomControl">Yes</Value>
+			<Value name="SimplifyFloats">No</Value>
+			<Value name="SkinID">{0650E9E3-1999-45C1-A24F-50BBE472326B}</Value>
+			<Value name="StartAfterLoading">No</Value>
+			<Value name="VRMLProfile">3</Value>
+			<Value name="X3D">Yes</Value>
+			<Value name="ForceDirectX">Yes</Value>
+		</Options>
+		<metadata/>
+	</SimulationInformation>
+	<Simulation id="r54311daa-6471-4634-a5e6-155dfb438d88">
+		<Description/>
+		<Step id="r42ede431-cdb9-42e6-a952-db542780d194">
+			<Description>1</Description>
+			<Substep id="rad20a419-d6fd-496a-a7f5-774e0ff447e3">
+				<Description>Rotate the BodyHood</Description>
+			</Substep>
+		</Step>
+		<Step id="rf07b35b6-ecf0-4ce0-951a-e7fb7a9dee31">
+			<Description>2</Description>
+			<Substep id="rb18b023d-f80c-49ab-8795-0d218dcc8268">
+				<Description>rotate</Description>
+			</Substep>
+		</Step>
+		<Step id="r4081ae7a-2fe4-41fa-b746-97ce45ce3870">
+			<Description>3</Description>
+			<Substep id="r0aee2957-c3f5-4ba4-8838-19f670c2c727">
+				<Description>Move the Containter_Clock</Description>
+			</Substep>
+			<Substep id="r06dea072-75e8-4725-9d2c-b102c221438a">
+				<Description>explo</Description>
+			</Substep>
+			<Substep id="ra6973cd4-2585-4ce6-9c2e-da39e36441c4">
+				<Description>Point the camera to the Taillights</Description>
+			</Substep>
+		</Step>
+		<Step id="r99eead88-6893-44da-b147-ff9e80f48720">
+			<Description>4</Description>
+			<Substep id="r080ce10d-c2d8-441a-bcd5-c49425d2ac55">
+				<Description>explo</Description>
+				<Comment/>
+			</Substep>
+			<Substep id="ra226ae1c-b545-4ce4-9590-424f04d4e3d6">
+				<Description>Move the Containter_Clock</Description>
+			</Substep>
+			<Substep id="rb2292695-3326-46cb-bc10-f638304219fc">
+				<Description>Rotate the BodyHood</Description>
+			</Substep>
+		</Step>
+	</Simulation>
+	<Procedure id="r54311daa-6471-4634-a5e6-155dfb438d88">
+		<Item id="r42ede431-cdb9-42e6-a952-db542780d194">
+			<Action id="rad20a419-d6fd-496a-a7f5-774e0ff447e3">
+				<metadata/>
+			</Action>
+			<metadata/>
+		</Item>
+		<Item id="rf07b35b6-ecf0-4ce0-951a-e7fb7a9dee31">
+			<Action id="rb18b023d-f80c-49ab-8795-0d218dcc8268">
+				<metadata/>
+			</Action>
+			<metadata/>
+		</Item>
+		<Item id="r4081ae7a-2fe4-41fa-b746-97ce45ce3870">
+			<Action id="r0aee2957-c3f5-4ba4-8838-19f670c2c727">
+				<metadata/>
+			</Action>
+			<Action id="r06dea072-75e8-4725-9d2c-b102c221438a">
+				<metadata/>
+			</Action>
+			<Action id="ra6973cd4-2585-4ce6-9c2e-da39e36441c4">
+				<metadata/>
+			</Action>
+			<metadata/>
+		</Item>
+		<Item id="r99eead88-6893-44da-b147-ff9e80f48720">
+			<Action id="r080ce10d-c2d8-441a-bcd5-c49425d2ac55">
+				<Comment/>
+				<metadata/>
+			</Action>
+			<Action id="ra226ae1c-b545-4ce4-9590-424f04d4e3d6">
+				<metadata/>
+			</Action>
+			<Action id="rb2292695-3326-46cb-bc10-f638304219fc">
+				<metadata/>
+			</Action>
+			<metadata/>
+		</Item>
+	</Procedure>
+	<DocItems>
+		<DocItem id="DoorFrRight_1f" objectID="2213931816592">
+			<metadata>
+				<value name="$UpdateTransform" decl-id="UPDATE_TRANSFORM_2867692E4DEE4801A8C3727F26EA48AE">-37.26 32.58 35.8 0.3937 0.0 0.0 0.0 0.3937 0.0 0.0 0.0 0.3937</value>
+				<value name="DocID" decl-id="DocID">DoorFrRight</value>
+			</metadata>
+		</DocItem>
+		<DocItem id="WheelFrLeft_26" objectID="2213931817952">
+			<metadata>
+				<value name="$UpdateTransform" decl-id="UPDATE_TRANSFORM_2867692E4DEE4801A8C3727F26EA48AE">30.48 15.46 57.34 0.3937 0.0 0.0 0.0 0.3937 0.0 0.0 0.0 0.3937</value>
+				<value name="DocID" decl-id="DocID">WheelFrLeft</value>
+			</metadata>
+		</DocItem>
+		<DocItem id="BodyHood_2a" objectID="2213931815552">
+			<metadata>
+				<value name="$UpdateTransform" decl-id="UPDATE_TRANSFORM_2867692E4DEE4801A8C3727F26EA48AE">-1.294E-5 46.94 40.81 0.3937 0.0 0.0 0.0 0.3937 0.0 0.0 0.0 0.3937</value>
+				<value name="DocID" decl-id="DocID">BodyHood</value>
+			</metadata>
+		</DocItem>
+		<DocItem id="DoorFrLeft_31" objectID="2213931818352">
+			<metadata>
+				<value name="$UpdateTransform" decl-id="UPDATE_TRANSFORM_2867692E4DEE4801A8C3727F26EA48AE">37.26 32.58 35.8 0.3937 0.0 0.0 0.0 0.3937 0.0 0.0 0.0 0.3937</value>
+				<value name="DocID" decl-id="DocID">DoorFrLeft</value>
+			</metadata>
+		</DocItem>
+		<DocItem id="DoorBack_33" objectID="2213931817872">
+			<metadata>
+				<value name="$UpdateTransform" decl-id="UPDATE_TRANSFORM_2867692E4DEE4801A8C3727F26EA48AE">0.0 64.53 -65.66 0.3937 0.0 0.0 0.0 0.3937 0.0 0.0 0.0 0.3937</value>
+				<value name="DocID" decl-id="DocID">DoorBack</value>
+			</metadata>
+		</DocItem>
+		<DocItem id="NewMarker_08_upright_flippedPlane_wrl_37" objectID="2213931815952">
+			<metadata>
+				<value name="DocID" decl-id="DocID">Marker</value>
+				<value name="Marker" decl-id="_1D527E0C476A4F7BB943A050B80708C0">-1</value>
+			</metadata>
+		</DocItem>
+	</DocItems>
+	<Resources/>
+</SimulationInteractivity>

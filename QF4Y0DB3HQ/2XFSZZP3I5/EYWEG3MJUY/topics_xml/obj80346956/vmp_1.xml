@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE animated-procedure PUBLIC "-//Bosch//DTD DITA AR Topic//EN" "artopic.dtd">
+<animated-procedure id="r54311daa-6471-4634-a5e6-33814c9b73e0">
+	<title>Open the Door</title>
+	<taskbody>
+		<context></context>
+		<steps><step><cmd>Open</cmd></step><step><cmd>Close</cmd></step><step><cmd>Special</cmd></step></steps></taskbody>
+	<animation-links>
+ANIMLINKS
+</animation-links>
+</animated-procedure>
